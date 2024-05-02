@@ -260,8 +260,8 @@ const InputMasks = () => {
             target="_blank"
             rel="noreferrer"
             to={{
-              pathname:
-                "https://github.com/text-mask/text-mask/tree/master/react#readme",
+              pathname: "https://github.com/text-mask/text-mask/tree/master/react",
+              hash: "#readme"
             }}
           >
             react-text-mask

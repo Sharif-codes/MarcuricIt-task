@@ -206,7 +206,7 @@ const MENU_ITEMS: MenuItemTypes[] = [
       {
         key: "accounting-report",
         label: "Accounting Report",
-        url: "/apps/email/compose",
+        url: "/components/accounting-report",
         parentKey: "components-accounting",
       },
       {

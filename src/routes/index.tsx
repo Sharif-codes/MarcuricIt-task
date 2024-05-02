@@ -57,7 +57,7 @@ const Pricing = React.lazy(() => import("../pages/other/Pricing"));
 
 // uikit
 const UIElements = React.lazy(() => import("../pages/uikit"));
-const ExpenseCategory = React.lazy(() => import("../../src/components/Accounting/ExpenseCategories/ExpenseCategoryTable"));
+
 
 // widgets
 const Widgets = React.lazy(() => import("../pages/widgets/"));
@@ -87,7 +87,10 @@ const GoogleMaps = React.lazy(() => import("../pages/maps/GoogleMaps"));
 const VectorMaps = React.lazy(() => import("../pages/maps/VectorMaps"));
 
 //Accounting
-
+const ExpenseCategory = React.lazy(() => import("../../src/components/Accounting/ExpenseCategories/ExpenseCategoryTable"));
+const CreateExpenseCategory = React.lazy(() => import("../../src/components/Accounting/ExpenseCategories/CreateExpenseCategory"));
+const Expenses = React.lazy(() => import("../../src/components/Accounting/Expenses/ExpensesTable"));
+const AccountingReportForms = React.lazy(() => import("../../src/components/Accounting/AccountingReport/AccountingReport"));
 
 export interface RoutesProps {
   path: RouteProps["path"];
@@ -290,6 +293,24 @@ const uiRoutes: RoutesProps = {
       path: "/components/accounting-expense-category",
       name: "ExpenseCategory",
       element: <ExpenseCategory />,
+      route: PrivateRoute,
+    },
+    {
+      path: "/components/accounting-create-expense-category",
+      name: "CrteateExpenseCategory",
+      element: <CreateExpenseCategory />,
+      route: PrivateRoute,
+    },
+    {
+      path: "/components/accounting-expenses",
+      name: "Expenses",
+      element: <Expenses />,
+      route: PrivateRoute,
+    },
+    {
+      path: "/components/accounting-report",
+      name: "AccountingReport",
+      element: <AccountingReportForms/>,
       route: PrivateRoute,
     },
     {
